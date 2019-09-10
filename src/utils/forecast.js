@@ -15,7 +15,7 @@ const forecast = (latitude, longitude, callback) => {
             const daily = body.daily;
             const today = daily.data[0];
             console.log(today);
-            callback(undefined, `${today.summary} It is currently ${temperature} out. There is a ${precipProbability}% chance of rain. The high today is ${today.temperatureHigh}. The low today is ${today.temperatureLow}.`);
+            callback(undefined, `${today.summary} It is currently ${temperature} C out, with a high of ${today.temperatureHigh} C and a low of ${today.temperatureLow} C. There is a ${precipProbability}% chance of rain.`);
         }
     });
 }
